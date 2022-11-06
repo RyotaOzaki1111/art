@@ -1,0 +1,43 @@
+// _mixin.scss
+
+$mq-breakpoints: (
+  'xs': 321px,
+  'sm': 576px,
+  'md': 768px,
+  'md-lg': 900px,
+  'lg': 1024px,
+  'xl': 1280px,
+  // 'xxl': 1920px,
+) !default;
+@mixin mq($breakpoint: md, $rule: min) {
+  $breakpoint: map-get($mq-breakpoints, $breakpoint);
+  @if $rule == max {
+    $breakpoint: $breakpoint - 1px;
+  }
+  @media screen and (#{$rule}-width: $breakpoint) {
+    @content;
+  }
+}
+
+
+// xs：極狭sp用（独自）
+// sm：sp用（bootstrap5）
+// md：sp用(bootstrap5/tailwind)
+// lg：pc/タブレット用（tailwind）
+// xl：pc用（tailwind）
+
+.pc-done {
+  display: block;
+
+  @include mq(md, max) {
+   display: none;
+ }
+}
+
+.sp-done {
+  display: none;
+
+  @include mq(md, max) {
+   display: block;
+ }
+}

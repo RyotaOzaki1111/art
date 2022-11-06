@@ -1,0 +1,19 @@
+// Times New Roman（ローカルのWebフォント）
+// @font-face {
+//   font-family: 'Times New Roman';
+//   src: '../font/TimesNewRoman.otf' format('opentype');
+// }
+// Noto Serif JP（Google Fonts）
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Sans+JP&display=swap');
+@import url('https://use.typekit.net/ypq2prf');
+
+// Times New Roman
+// $times-new-roman: 'Times New Roman', serif;
+// Noto Serif JP
+// $noto-serif: 'Noto Serif JP', serif;
+
+$Marcellus-serif:'Marcellus', serif; 
+// $c-primary:'baskerville-display-pt', serif;
+$c-sentense-serif:'Hiragino Kaku Gothic ProN', serif; 
+$c-title-fontWeight:700;
+

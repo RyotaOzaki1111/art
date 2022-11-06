@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+@use "../foundation/base" as *;
+@use "../foundation/color" as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/reset" as *;
+
+
+#footer {
+  padding-top: 195px;
+  background-color: #e6e4dc;
+  
+  .footer__wrapper {  
+    padding: 80px 30px;
+    background-color: #D0D3D3;
+    font-size: 1.2rem;
+
+    @include mq(md, max) {
+      padding: 60px 30px;
+    }
+
+    .footer-address {
+      margin-bottom: 3.2rem;
+
+      @include mq(md, max) {
+        margin-bottom: 3rem;
+      }
+      
+      p {
+        margin-bottom: 0.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+
+      @include mq(md, max) {
+        flex-direction: column;
+      }
+      
+      .sns {
+        display: flex;
+
+        @include mq(md, max) {
+          margin-bottom: 30px;
+        }
+
+        li {
+          margin-right: 1rem;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .privacy-policy {
+        display: flex;
+
+        a {
+          display: block;
+          margin-right: 3rem;
+
+          @include mq(md, max) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

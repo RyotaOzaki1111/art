@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@use "../foundation/base" as *;
+@use "../foundation/color" as *;
+@use "../foundation/variable" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/reset" as *;
+
+.header {
+  position: fixed;
+  z-index: 10000;  width: 100%;
+  // background-color: $c-headerfix-bg;
+  transition: all 0.5s ease-in-out;
+  &__contents--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 30px;
+
+    .site-logo {
+
+      a {
+        display: block;
+      }
+    }
+
+    .toggle-btn {
+      position: absolute;
+      right: 30px;
+      z-index: 10000;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+
+      span {
+        position: absolute;
+        left: 6px;
+        display: inline-block;
+        width: 30px;
+        height: 1px;
+        background: #333;
+        transition: 0.5s;
+
+        &:nth-child(1) {
+          top: 10px;
+        }
+
+        &:nth-child(2) {
+          top: 20px;
+        }
+
+        &:nth-child(3) {
+          top: 30px;
+        }
+
+      }
+
+      &.active {
+        
+        span:nth-child(1) {
+          top: 21px;
+          transform: rotate(-45deg);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          top: 21px;
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    #navi {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+      background-color: $c-headerfix-bg;
+      transition: all 0.6s ease-in-out;
+      transform: translateX(-100%);
+
+
+      &.active {
+        transform: translateX(0%);
+      }
+
+      .menu {
+        margin: 0 auto;
+        padding: 115px 30px 0;
+        width: 160px;
+        text-align: center;
+
+        li {
+          padding: 20px 0;
+          border-top: 1px solid $c-black;
+        }
+      }
+
+      .sns {
+        margin: 60px auto 0;
+        padding: 0 30px;
+        width: 160px;
+        text-align: center;
+
+        li {
+          padding: 0 0 20px 0;
+        }
+      } 
+    } 
+  }
+  &.active {
+    opacity: 0;
+  }
+}

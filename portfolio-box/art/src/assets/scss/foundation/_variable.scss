@@ -1,0 +1,21 @@
+// セマンティックな命名
+// ホバー時のtransitionの秒数
+$hover-transition: 300ms;
+$scroll-transition: all 3s ease;
+$navi-slide: all .5s;
+// innerのwidth
+$inner-width: 960px;
+
+// 「プロパティ名-値」を変数名にする
+// opacityに使用（06は連番ではなく値なのでハイフンが入ります）
+$opacity-06: 0.6;
+// line-heightに使用（「.」は使えないので代わりにdotとする）
+$line-height-1dot5: 1.5;
+// box-shadowに使用（命名が無理すぎるので値の大きさを変数名にする）
+$box-shadow-sm: 0 5px 10px 0 rgba(#000000, 0.1);
+$box-shadow-md: 0 10px 20px 0 rgba(#000000, 0.1);
+// box-shadowに使用（連番）
+$box-shadow01: 0 5px 10px 0 rgba(#000000, 0.1);
+$box-shadow02: 0 10px 20px 0 rgba(#000000, 0.1);
+$box-shadow-card: 0 8px 4px #ccc;
+// $openmenu-list-border: solid 1px #fff;

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@use "../../foundation/color" as *;
+@use "../../foundation/font" as *;
+@use "../../foundation/mixin" as *;
+
+
+.c-sec-title{
+  display: inline-block;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #292323;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 6rem;
+  font-family: 'Baskerville Poster PT', serif;
+  line-height: 1;
+
+  @include mq(md, max) {
+    margin-bottom: 45px;
+    font-size: 3.2rem;
+  }
+  
+}
